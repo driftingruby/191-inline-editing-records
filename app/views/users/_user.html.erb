@@ -1,0 +1,8 @@
+<div class="divTableCell"><%= user.first_name %></div>
+<div class="divTableCell"><%= user.last_name %></div>
+<div class="divTableCell"><%= user.email %></div>
+<div class="divTableCell">
+  <%= link_to 'Show', user %>
+  <%= link_to 'Edit', edit_user_path(user), remote: true %>
+  <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

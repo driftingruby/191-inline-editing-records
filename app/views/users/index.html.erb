@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+<div class="divTable paleBlueRows">
+  <div class="divTableHeading">
+    <div class="divTableRow">
+      <div class="divTableHead">First Name</div>
+      <div class="divTableHead">Last Name</div>
+      <div class="divTableHead">Email</div>
+      <div class="divTableHead">Actions</div>
+    </div>
+  </div>
+  <div class="divTableBody">
+    <% @users.each do |user| %>
+      <%= content_tag :div, class: 'divTableRow', id: dom_id(user) do %>
+        <%= render user %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

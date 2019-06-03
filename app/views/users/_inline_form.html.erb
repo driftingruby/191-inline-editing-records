@@ -1,0 +1,17 @@
+<%= form_with model: user, class: 'divTableRow', id: dom_id(user, 'inline_form') do |form| %>
+  <div class="divTableCell">
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="divTableCell">
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="divTableCell">
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="divTableCell">
+    <%= form.submit %>
+  </div>
+<% end %>

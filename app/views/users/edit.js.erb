@@ -1,0 +1,2 @@
+document.getElementById('<%= dom_id(@user) %>').insertAdjacentHTML('afterend', "<%= j render 'inline_form', user: @user %>")
+document.getElementById('<%= dom_id(@user) %>').style.display = 'none'
